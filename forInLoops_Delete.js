@@ -7,23 +7,23 @@
 
 // In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+var values = {
+  one: 'These',
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+} 
 
-// for(var key in values) {
-//   console.log(values[key])
-// }
+for(var key in values) {
+  console.log(values[key])
+}
 
 // In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 
-// for(var key in values) {
-//   console.log(key)
-// }
+for(var key in values) {
+  console.log(key)
+}
 
 
 // ========================
@@ -32,7 +32,11 @@
 // Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 
 function showValues( obj ) {
-  // CODE HERE
+  let string='';
+  for(let key in obj){
+   string += obj[key]
+  }
+  return string;
 }
 
 
@@ -60,7 +64,15 @@ function showValues( obj ) {
 // Write a function called secrets that will take in an object. Create an empty string variable. Write a for in loop that loops over the object. If the property name starts with an 'sh', concatenate the value to the string variable. By the end of the for in loop, you should have a sentence, return that sentence.
 
 // CODE HERE
-
+const secrets= obj => {
+  let str ='';
+  for(let key in obj){
+    if(key.substr(0,2) ==='sh'){
+      str += obj[key];
+    }
+  }
+  return str;
+}
 
 // ========================
 
