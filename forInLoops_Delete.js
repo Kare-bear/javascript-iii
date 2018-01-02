@@ -45,8 +45,12 @@ function showValues( obj ) {
 
 // Write a function called greaterThan10 that takes in an object. Write a for in loop that loops over the object and changes any value that is great than 10 to 0. Return the updated object.
 
-// CODE HERE
-
+function greaterThan10(obj){
+  for(var prop in obj){
+    obj.replace(10,0)
+  }console.log(obj);
+}
+greaterThan10()
 
 
 // ========================
